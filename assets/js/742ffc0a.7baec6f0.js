@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkvert_ig_o_docs=self.webpackChunkvert_ig_o_docs||[]).push([[3426],{3392:o=>{o.exports=JSON.parse('{"label":"facebook","permalink":"/VERTIgO-docs/blog/tags/facebook","allTagsPath":"/VERTIgO-docs/blog/tags","count":1}')}}]);
