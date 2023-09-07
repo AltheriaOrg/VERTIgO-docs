@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkvert_ig_o_docs=self.webpackChunkvert_ig_o_docs||[]).push([[7577],{343:o=>{o.exports=JSON.parse('{"permalink":"/VERTIgO-docs/blog/tags/docusaurus","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
