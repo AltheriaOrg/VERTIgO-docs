@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkvert_ig_o_docs=self.webpackChunkvert_ig_o_docs||[]).push([[4353],{3880:e=>{e.exports=JSON.parse('{"permalink":"/VERTIgO-docs/blog/tags/hello","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
