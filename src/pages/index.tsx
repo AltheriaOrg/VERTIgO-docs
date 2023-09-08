@@ -1,25 +1,23 @@
 import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx('hero hero--primary', styles.heroBanner) + " hero--mode"}>
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <img src="/img/VERTIgO-logo-long.png" alt="Logo" />
+        <h1 >Documentation</h1>
+        <p className="hero__subtitle">Get started using the <b>European Exercises Simulation Platform (EESP)</b></p>
         <div className={styles.buttons}>
-          {/*<Link*/}
-          {/*  className="button button--secondary button--lg"*/}
-          {/*  to="">*/}
-          {/*  Get Started*/}
-          {/*</Link>*/}
+          <Link
+            className="button button--secondary button--lg"
+            to="">
+            Get Started
+          </Link>
         </div>
       </div>
     </header>
@@ -27,14 +25,12 @@ function HomepageHeader() {
 }
 
 export default function Home(): JSX.Element {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={``}
+      description="">
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
       </main>
     </Layout>
   );
