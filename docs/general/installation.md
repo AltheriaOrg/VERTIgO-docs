@@ -92,4 +92,4 @@ Start the EESP.exe in the **Desktop → EESP → server** folder we provided.
 This will open a large window. You are not supposed to interact with this window so simply minimize it.
 Keep this running as long as you are using EESP trainings. 
 
-If training are failing to launch after starting a training using the VERTIgO console, there Server might be stuck. Close the server and start the .exe again. Launch the training again on the VERTIgO console.
+If training are failing to launch after starting a training using the VERTIgO console, the Server might be stuck. Close the server and start the .exe again. Launch the training again on the VERTIgO console.
