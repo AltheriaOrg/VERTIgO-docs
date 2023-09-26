@@ -10,7 +10,7 @@ Here you will find general information and installation guides for EESP.
 ## Pages
 
 - [Installation](./installation)
-- [Toubleshooting](./toubleshooting)
+- [Troubleshooting](./)
     - [Run .ps1 files](./troubleshooting/allow-powershell)
 
 
