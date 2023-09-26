@@ -46,6 +46,8 @@ const config = {
                 title: 'VERTIgO Docs', logo: {
                     alt: 'VERTIgO Logo', src: 'img/VERTIgO-logo.png',
                 }, items: [{
+                    type: 'doc', docId: 'general/index', position: 'left', label: 'General',
+                },{
                     type: 'doc', docId: 'eesp-editor/General', position: 'left', label: 'EESP editor',
                 }, {
                     type: 'doc', docId: 'trainer-web-app/General', position: 'left', label: 'Trainer web app',
