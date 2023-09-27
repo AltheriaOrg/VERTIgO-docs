@@ -129,4 +129,8 @@ The VR applications also needs to be configured for your network and re-configur
 4. Right click on the **Update PC EESP Configuration.ps1** file
 5. Follow the instruction inside the black or white window.
  
-This will create a new file in the same folder called **config.txt**. Copy this file to the headset
+This will create a new file in the same folder called **config.txt**. Copy this file to the headset using Windows Explorer to: 
+    
+`Quest 2/Internal Storage/Android/data/com.AltheriaSolutions.XXXXXX/files`
+
+*Names can vary depending on you language settings.
