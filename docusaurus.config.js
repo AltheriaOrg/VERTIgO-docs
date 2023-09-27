@@ -42,7 +42,7 @@ const config = {
     themeConfig: /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             // Replace with your project's social card
-            image: 'img/docusaurus-social-card.jpg', navbar: {
+            image: 'img/VERTIgO-logo.png', navbar: {
                 title: 'VERTIgO Docs', logo: {
                     alt: 'VERTIgO Logo', src: 'img/VERTIgO-logo.png',
                 }, items: [{
