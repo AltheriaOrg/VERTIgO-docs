@@ -78,7 +78,7 @@ If you face any of these issues, consider following the steps below to reconfigu
 1. Open the ***Desktop → Vertigo Console V1*** folder on your desktop.
 2. Right-Click on the **Update Vertigo Website Configuration.ps1** file. 
 3. Select **Run With Powershell**. It will open a black or blue window on screen which will attempts to fix the issues automatically. 
-![Docker Dekstop On](/img/update-vertigo-website-configuration.png)
+![Docker Desktop On](/img/update-vertigo-website-configuration.png)
 The website will restart. Verify in Docker Desktop if everything is green (See step 1).
 
 If you have the **Update Vertigo Website Configuration.ps1** but do not see the **Run With Powershell** option, it immediately closes or gives a red error, see [this page](/docs/general/troubleshooting/allow-powershell) and try again.
@@ -131,7 +131,15 @@ The VR applications also needs to be configured for your network and re-configur
 3. Open the ***Desktop → Vertigo Console V1*** folder in explorer.
 4. Right click on the **Update PC EESP Configuration.ps1** file
 5. Follow the instruction inside the black or white window.
+
+If you see **adb: error: failed to get feature set: device unauthorized.**, please check the headset for an "Enable USB debugging" popup and confirm it. Start again from step 1.
  
 This will create a new file in the same folder called **config.txt** and it will attempt to copy it to the headset. If this fails, copy it manually inside the folder bellow:
 `Quest 2/Internal Storage/Android/data/com.AltheriaSolutions.XXXXXX/files`
 *Names can vary depending on you language settings.
+
+![Docker Desktop On](/img/headset-config-ok.png)
+If you windows looks like this image, it completed successfully.
+
+To confirm if everything is working, try adding the headset to the Console or confirm it comes online if the headset was already added before.
+See the dedicated guide for adding headsets for more instructions.

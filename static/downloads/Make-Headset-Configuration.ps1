@@ -27,6 +27,7 @@ IP_OVERWRITE=
 $Config | Set-Content -Path "config.txt"
 Write-Host 'Saved the new configuration to "config.txt". Copying it to the Headset...'
 $adbPath = "./platform-tools/adb.exe"
+Invoke-Expression "$adbPath devices"
 $adbCommand = "$adbPath push config.txt /sdcard/Android/data/com.AltheriaSolutions.EESP/files"
 # Run the adb command
 Invoke-Expression $adbCommand
