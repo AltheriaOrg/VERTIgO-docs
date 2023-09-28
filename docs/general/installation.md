@@ -39,7 +39,7 @@ Please download these scripts and place them inside the ***Desktop → Vertigo C
 1. <a target="_blank" href="/downloads/Update-Vertigo-Website-Configuration.ps1" download='Update Vertigo Website Configuration.ps1'>Download: Update Vertigo Website Configuration.ps1</a>
 2. <a target="_blank" href="/downloads/Update-PC-EESP-Configuration.ps1" download='Update PC EESP Configuration.ps1'>Download: Update PC EESP Configuration.ps1</a>
 3. <a target="_blank" href="/downloads/Make-Headset-Configuration.ps1" download='Make Headset Configuration.ps1'>Download: Make Headset Configuration.ps1</a>
-4. <a target="_blank" href="/downloads/platform-tools.zip" download='platform-tools.zip'>Download: platform-tools.zip</a>. Extract the zip file and place platform-tools to the ***Desktop → Vertigo Console V1***
+4. <a target="_blank" href="/downloads/platform-tools.zip" download='platform-tools.zip'>Download: platform-tools.zip</a>. Extract the zip file and place platform-tools to the Desktop → Vertigo ConsoleV1
 
 ![Folder Setup](/img/folder-setup.png)
 
