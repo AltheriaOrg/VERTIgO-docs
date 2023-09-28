@@ -1,28 +1,48 @@
-﻿Write-Host "This script will help you configure a headset."
-$choice = Read-Host "Is the VERTIgO Console Website running on this computer?`nSelect an option by typing the number:`n1) Yes`n2) No`nAnswer"
+﻿# Constants
+$FrontendLocation = ".\VERTIgO-froten-end"
+$FrontendEnvLocation = Join-Path -Path $FrontendLocation -ChildPath ".env"
+$StartPath = $PWD.Path
 
-if ($choice -eq "1") {
-    $IPAddress = (Test-Connection -ComputerName (hostname) -Count 1).IPv4Address.IPAddressToString
-}
-elseif ($choice -eq "2") {
-    # User selected "No"
-    $IPAddress =  Read-Host "Type the IP address of the computer where the website is located"
-    # Add your actions for when the website is not running here
-}
-else {
-    # User entered an invalid choice
-    Write-Host "Error: Invalid choice. Please select 1 or 2. Press ENTER to exit."
-    $null = Read-Host
+# Check if the "frontend" folder exists, and create it if it doesn't
+if (-not (Test-Path -Path $FrontendLocation -PathType Container)) {
+    Write-Host 'Error: Did not find the "VERTIgO-froten-end" folder here. Are you sure this file in placed in the correct location?'
     exit 1
 }
 
-$DeviceName =  Read-Host "Choose a name for this headset"
+# Get the current IP address
+$IPAddress = (Test-Connection -ComputerName (hostname) -Count 1).IPv4Address.IPAddressToString
 
-$Config = "DOMAIN=http://$IPAddress`
-DEVICE_NAME=$DeviceName`
-IP_OVERWRITE=
+# Output the IP address to the console
+Write-Host "Current IP Address: $IPAddress"
+
+# Define the content for the .env file
+$EnvContent = " #Including the port (Default 8181 for Headset and 3001 for Main server)
+PUBLIC_HEADSET_SERVER=$IPAddress`:8181
+PUBLIC_MAIN_SERVER=$IPAddress`:3001
+PUBLIC_API_PROTOCOL=http
+
+JWT_SECRET_KEY=Secret
 "
 
-$Config | Set-Content -Path "config.txt"
+# Store the content in the .env file
+$EnvContent | Set-Content -Path $FrontendEnvLocation
 
-Write-Host 'Saved the new configuration to "config.txt". Copy this file to the headset.'
+Write-Host "The VERTIgO website config has been updated. Please wait while the website is restarting..."
+
+# Restart Docker
+Set-Location -Path $FrontendLocation
+$outputDown = docker-compose down 2>&1
+if ($outputDown | Select-String "error during connect:") {
+    Write-Host "Error: Make sure Docker Desktop is running. Press ENTER to exit."
+    # You can add more custom error handling or exit the script here as needed.
+    $null = Read-Host
+    Set-Location -Path $StartPath
+    exit 1
+}
+
+$outputUp = docker-compose up -d --build 2>&1
+
+# Close the program
+Set-Location -Path $StartPath
+Write-Host "The operation has completed. Press ENTER to close this program."
+$null = Read-Host

@@ -10,7 +10,7 @@ if (-not (Test-Path -Path $FrontendLocation -PathType Container)) {
 }
 
 # Get the current IP address
-$IPAddress = (Test-Connection -ComputerName (hostname) -Count 1).IPv4Address.IPAddressToString
+$IPAddress = (Get-NetIPAddress | Where-Object { $_.InterfaceAlias -like '*Wi-Fi*' -and $_.AddressFamily -eq 'IPv4' }).IPAddress
 
 # Output the IP address to the console
 Write-Host "Current IP Address: $IPAddress"

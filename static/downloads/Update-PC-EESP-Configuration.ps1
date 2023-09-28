@@ -2,7 +2,7 @@
 $choice = Read-Host "Is the VERTIgO Website running on this computer?`nSelect an option by typing the number:`n1) Yes`n2) No`nAnswer"
 
 if ($choice -eq "1") {
-    $IPAddress = (Test-Connection -ComputerName (hostname) -Count 1).IPv4Address.IPAddressToString
+    $IPAddress = (Get-NetIPAddress | Where-Object { $_.InterfaceAlias -like '*Wi-Fi*' -and $_.AddressFamily -eq 'IPv4' }).IPAddress
 }
 elseif ($choice -eq "2") {
     # User selected "No"
