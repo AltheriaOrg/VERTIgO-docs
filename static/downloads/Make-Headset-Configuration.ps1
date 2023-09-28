@@ -1,4 +1,5 @@
 ﻿Write-Host "This script will help you configure a headset."
+Write-Host "Please make sure the headset is connected using USB and confirm the popup inside the headset to allow the connection."
 $choice = Read-Host "Is the VERTIgO Console Website running on this computer?`nSelect an option by typing the number:`n1) Yes`n2) No`nAnswer"
 
 if ($choice -eq "1") {

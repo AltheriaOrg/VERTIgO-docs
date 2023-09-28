@@ -39,6 +39,9 @@ Please download these scripts and place them inside the ***Desktop → Vertigo C
 1. <a target="_blank" href="/downloads/Update-Vertigo-Website-Configuration.ps1" download='Update Vertigo Website Configuration.ps1'>Download: Update Vertigo Website Configuration.ps1</a>
 2. <a target="_blank" href="/downloads/Update-PC-EESP-Configuration.ps1" download='Update PC EESP Configuration.ps1'>Download: Update PC EESP Configuration.ps1</a>
 3. <a target="_blank" href="/downloads/Make-Headset-Configuration.ps1" download='Make Headset Configuration.ps1'>Download: Make Headset Configuration.ps1</a>
+4. <a target="_blank" href="/downloads/platform-tools.zip" download='platform-tools.zip'>Download: platform-tools.zip</a>. Extract the zip file and place platform-tools to the ***Desktop → Vertigo Console V1***
+
+![Folder Setup](/img/folder-setup.png)
 
 If you have never run a .ps1 script on you computer, please follow the instruction on [this page](/docs/general/troubleshooting/allow-powershell) before you continue.
 
@@ -55,7 +58,7 @@ In the red section you can see 2 rows called **vertigo-back-end** and **vertigo-
 ![Docker Dekstop On](/img/docker-desktop-on.png)
 The the icons are now green and the website is running. Browse to [http://localhost:3000](http://localhost:3000) in your browser to confirm this.
 
-### Step 2: (Optional) Reconfigure the website.
+### Step 2: Reconfigure the website.
 This step is typically only required the first time. However, after some time passes or you move with your laptop to a different network, this step will need to be repeated. If you are having a different issue with the website repeating this step might also help.
 
 Sometimes the website will not work correctly. You can recognize this when:
@@ -124,13 +127,11 @@ If training are failing to launch after starting a training using the VERTIgO co
 ### EESP VR application
 The VR applications also needs to be configured for your network and re-configured when you move to a different location/network.
 1. Connect you VR headset to the laptop using a cable.
-2. Verify that the headset is connected by opening Windows Explorer and open the page where USB devices show (This PC).
+2. Put on the headset and confirm the popup to allow the USB connection."
 3. Open the ***Desktop → Vertigo Console V1*** folder in explorer.
 4. Right click on the **Update PC EESP Configuration.ps1** file
 5. Follow the instruction inside the black or white window.
  
-This will create a new file in the same folder called **config.txt**. Copy this file to the headset using Windows Explorer to: 
-    
+This will create a new file in the same folder called **config.txt** and it will attempt to copy it to the headset. If this fails, copy it manually inside the folder bellow:
 `Quest 2/Internal Storage/Android/data/com.AltheriaSolutions.XXXXXX/files`
-
 *Names can vary depending on you language settings.
