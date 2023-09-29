@@ -10,7 +10,7 @@ Open the windows search and type "Powershell". Select "Open as Administrator". T
 ### 2. Insert this command commands.
 Copy and and paste the command bellow to the powershell window (using ctrl+c & ctrl+v) and press enter.
 
-`Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force;`
+`Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force;`
 
 ![Open Powershell as Administrator](/img/enable-ps1-scripts.png)
 ### 3. Close powershell
