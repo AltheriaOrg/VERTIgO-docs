@@ -46,7 +46,7 @@ const config = {
                 title: 'VERTIgO Docs', logo: {
                     alt: 'VERTIgO Logo', src: 'img/VERTIgO-logo.png',
                 }, items: [{
-                    type: 'doc', docId: 'general/index', position: 'left', label: 'General',
+                    type: 'doc', docId: 'general/installation', position: 'left', label: 'General',
                 },{
                     type: 'doc', docId: 'eesp-editor/General', position: 'left', label: 'EESP editor',
                 }, {
