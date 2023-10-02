@@ -16,10 +16,8 @@ else {
     exit 1
 }
 
-$componentList = @("EESP", "EESP_Editor_v1_00", "EESP_Server_v1_00", "EESP_LiveView_V1_00", "EESP_LifeView_V1_00")
-
-# Loop over the list and log each string
-foreach ($component in $componentList) {
+$folders = Get-ChildItem -Path "$env:APPDATA\..\LocalLow\AltheriaSolutions\" -Directory | Where-Object { $_.Name -like "EESP*" }
+foreach ($component in $folders) {
     $EESPLocationPath = "$env:APPDATA\..\LocalLow\AltheriaSolutions\" + $component  # Path to the destination folder
     if (Test-Path -Path $EESPLocationPath -PathType Container) {
         $Config = "DOMAIN=http://$IPAddress`nDEVICE_NAME=$component`nIP_OVERWRITE="
@@ -29,15 +27,3 @@ foreach ($component in $componentList) {
         #Write-Host "The directory $directoryPath does not exist."
     }
 }
-$null = Read-Host "Everything has been updated. Press ENTER to close the program"
-
-$registryPath = "HKLM:\Software\YourCompany\YourKey"
-
-# Check if the registry key exists
-#if (-not (Test-Path -Path $registryPath)) {
-#   # Create the registry key
-#    New-Item -Path $registryPath -Force
-#    Write-Host "Registry key $registryPath created."
-#} else {
-#    Write-Host "Registry key $registryPath already exists."
-#}

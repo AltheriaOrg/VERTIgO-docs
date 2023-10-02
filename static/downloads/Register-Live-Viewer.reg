@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\EESP]
+@="URL:EESP Protocol"
+"URL Protocol"=""
+
+[HKEY_CLASSES_ROOT\EESP\shell]
+
+[HKEY_CLASSES_ROOT\EESP\shell\open]
+
+[HKEY_CLASSES_ROOT\EESP\shell\open\command]
+@="\"C:\\Users\\VERTIGO\\Desktop\\EESP\\LiveView\\EESP_LiveView_V1_01.exe\" \"%1\""
