@@ -28,9 +28,10 @@ $Config | Set-Content -Path "config.txt"
 Write-Host 'Saved the new configuration to "config.txt". Copying it to the Headset...'
 $adbPath = "./platform-tools/adb.exe"
 Invoke-Expression "$adbPath devices"
-$adbCommand = "$adbPath push config.txt /sdcard/Android/data/com.AltheriaSolutions.EESP/files"
-# Run the adb command
+
+$adbCommand = "$adbPath push config.txt /sdcard/Android/data/com.AltheriaSolutions.EESP_Reader_V1_00/files"
 Invoke-Expression $adbCommand
 
 Write-Host "The operation has completed. Press ENTER to close this program."
+Write-Host "If something failed, please copy the config.txt file to the headset manually to Quest 2/Internal Storage/Android/data/com.AltheriaSolutions.XXXXXX/files"
 $null = Read-Host
