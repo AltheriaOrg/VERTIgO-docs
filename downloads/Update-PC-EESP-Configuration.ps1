@@ -27,3 +27,6 @@ foreach ($component in $folders) {
         #Write-Host "The directory $directoryPath does not exist."
     }
 }
+
+Write-Host "The operation has completed. Press ENTER to close this program."
+$null = Read-Host
