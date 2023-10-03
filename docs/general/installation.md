@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 title: Installation
 ---
 
@@ -12,9 +12,9 @@ title: Installation
    2. [EESP Server](#eesp-server)
 
 ## Introduction
-EESP consists of multiple programs that interact with eachother:
+EESP consists of multiple programs that interact with each other:
 - **VR Application**: An app on a VR headset for trainees to participate in a training sessions.
-- **Editor**: A PC application for traininer to create and test a training.
+- **Editor**: A PC application for trainer to create and test a training.
 - **Live Liewer**: A PC application for trainers to view a training and communicate with the trainees.
 - **Server**: A PC application that runs in the background that makes the training possible. The user is not means to interact with this program.
 - **VERTIgO Console**: The website where you can manage headsets, users, launch trainings and view training reports. The website runs on a special web address that you can type in the address bar of you browser: [http://localhost:3000](http://localhost:3000). It's a good idea to bookmark this site for easy access.
@@ -32,7 +32,7 @@ We are currently also working on other ways to make this setup simpler. You feed
 
 :::
 
-## Configuration Tools
+## Installation Tools
 All the EESP components need to be configured for you network. This also means that the components need to be reconfigured if you move to a different location/network or the network changes.
 To help you, we provide some simple tools (called scripts) to mostly automate this process.
 Please download these scripts and place them inside the ***Desktop → Vertigo Console V1*** folder.
@@ -48,6 +48,8 @@ If you have never run a .ps1 script on you computer, please follow the instructi
 ## VERTIgO Console Setup
 The website runs inside a program called Docker Desktop. Locate and open "Docker Desktop." You can find its icon with a blue whale on the Windows taskbar. If you don't see it there, you may need to add it.
 <img src="/img/docker-desktop-icon.png" alt="Docker Desktop Icon" width="50"/>
+
+If docker is not yet installed, follow the instructions [here](/docs/general/troubleshooting/allow-powershell)
 
 Image: The docker desktop icon.
 
