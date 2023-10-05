@@ -10,10 +10,22 @@ if (-not (Test-Path -Path $FrontendLocation -PathType Container)) {
 }
 
 # Get the current IP address
-$IPAddress = (Get-NetIPAddress | Where-Object { $_.InterfaceAlias -like '*Wi-Fi*' -and $_.AddressFamily -eq 'IPv4' }).IPAddress
+$IPAddress = (Get-NetIPAddress | Where-Object { $_.AddressFamily -eq 'IPv4' -and $_.IPAddress -like '192.168*' -and $_.AddressState -eq 'Preferred'}).IPAddress
+Write-Host = "Detected IP addresses: " $IPAddress
+if ($IPAddress -ne $null) {
+    if ($IPAddress.Count -gt 1) {
+        $IPAddress = $IPAddress[0]
+    } else {
+        $IPAddress = $IPAddress
+    }
+} else {
+    Write-Output "No active IP address starting found. Are you sure you are connected to the WI-FI or using a Internet Cable?"
+    Write-Host "The operation has failed. Press ENTER to close this program."
+    $null = Read-Host
+    exit
+}
 
-# Output the IP address to the console
-Write-Host "Current IP Address: $IPAddress"
+Write-Host = "Configuring for IP address:" $IPAddress
 
 # Define the content for the .env file
 $EnvContent = " #Including the port (Default 8181 for Headset and 3001 for Main server)

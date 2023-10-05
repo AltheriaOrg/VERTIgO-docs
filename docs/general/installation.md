@@ -56,7 +56,7 @@ Image: The docker desktop icon.
 ### <a name="console-step-1"></a>Step 1: Start the website
 Open "Docker Desktop". Ensure you have the "Containers" tab selected on the left sidebar.
 ![Docker Dekstop Off](/img/docker-desktop-off.png)
-In the red section you can see 2 rows called **vertigo-back-end** and **vertigo-fronten-end**. If these rows are already green you can continue to the next step. In this image both are grayed out, which means they are not running. Press the two "Play" buttons on the right to start the website. This can take up to 30 seconds.
+In the red section you can see 2 rows called **vertigo-back-end** and **vertigo-froten-end**. If these rows are already green you can continue to the next step. In this image both are grayed out, which means they are not running. Press the two "Play" buttons on the right to start the website. This can take up to 30 seconds.
 ![Docker Dekstop On](/img/docker-desktop-on.png)
 The the icons are now green and the website is running. Browse to [http://localhost:3000](http://localhost:3000) in your browser to confirm this.
 
