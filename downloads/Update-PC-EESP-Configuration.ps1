@@ -2,7 +2,20 @@
 $choice = Read-Host "Is the VERTIgO Website running on this computer?`nSelect an option by typing the number:`n1) Yes`n2) No`nAnswer"
 
 if ($choice -eq "1") {
-    $IPAddress = (Get-NetIPAddress | Where-Object { $_.InterfaceAlias -like '*Wi-Fi*' -and $_.AddressFamily -eq 'IPv4' }).IPAddress
+    $IPAddress = (Get-NetIPAddress | Where-Object { $_.AddressFamily -eq 'IPv4' -and $_.IPAddress -like '192.168*' -and $_.AddressState -eq 'Preferred'}).IPAddress
+    Write-Host = "Detected IP addresses: " $IPAddress
+    if ($IPAddress -ne $null) {
+        if ($IPAddress.Count -gt 1) {
+            $IPAddress = $IPAddress[0]
+        } else {
+            $IPAddress = $IPAddress
+        }
+    } else {
+        Write-Output "No active IP address starting found. Are you sure you are connected to the WI-FI or using a Internet Cable?"
+        Write-Host "The operation has failed. Press ENTER to close this program."
+        $null = Read-Host
+        exit
+    }
 }
 elseif ($choice -eq "2") {
     # User selected "No"
@@ -15,6 +28,8 @@ else {
     $null = Read-Host
     exit 1
 }
+
+Write-Host = "Configuring for IP address:" $IPAddress
 
 $folders = Get-ChildItem -Path "$env:APPDATA\..\LocalLow\AltheriaSolutions\" -Directory | Where-Object { $_.Name -like "EESP*" }
 foreach ($component in $folders) {
