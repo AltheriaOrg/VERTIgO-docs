@@ -30,7 +30,7 @@ This setup is only required the first you run the VERTIgO Console after installi
       ![WSL install](/img/vertigo-first-time.png)
    3. type **docker compose up -d** and press enter. This can take some time. You can close the windows when it's ready.
    4. Navigate back to the the **Vertigo Console V1** folder on the Desktop
-   5. Right click on the **VERTIgO-fronten-end** folder and select **Open in terminal**.
+   5. Right click on the **VERTIgO-froten-end** folder and select **Open in terminal**.
    6. type **docker compose up -d** and press enter. This can take some time. You can close the windows when it's ready.
    7. Confirm everything is working: Open Docker Desktop and navigate to the containers tab.
    ![Docker Dekstop On](/img/docker-desktop-on.png)

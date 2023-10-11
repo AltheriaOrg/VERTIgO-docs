@@ -3,13 +3,6 @@ sidebar_position: 1
 title: Installation
 ---
 
-# Table of Contents
-1. [Introduction](#introduction)
-2. [Configuration Tools](#configuration-tools)
-3. [VERTIgO Console Setup](#vertigo-console-setup)
-4. [EESP PC Applications](#eesp-pc-applications)
-   1. [EESP Editor](#eesp-editor)
-   2. [EESP Server](#eesp-server)
 
 ## Introduction
 EESP consists of multiple programs that interact with each other:
@@ -39,8 +32,9 @@ Please download these scripts and place them inside the ***Desktop → Vertigo C
 1. <a target="_blank" href="/downloads/Update-Vertigo-Website-Configuration.ps1" download='Update Vertigo Website Configuration.ps1'>Download: Update Vertigo Website Configuration.ps1</a>
 2. <a target="_blank" href="/downloads/Update-PC-EESP-Configuration.ps1" download='Update PC EESP Configuration.ps1'>Download: Update PC EESP Configuration.ps1</a>
 3. <a target="_blank" href="/downloads/Make-Headset-Configuration.ps1" download='Make Headset Configuration.ps1'>Download: Make Headset Configuration.ps1</a>
-4. <a target="_blank" href="/downloads/platform-tools.zip" download='platform-tools.zip'>Download: platform-tools.zip</a>. Extract the zip file and place platform-tools to the Desktop → Vertigo ConsoleV1
-5. 
+4. <a target="_blank" href="/downloads/Configure-Live-Viewer.ps1" download='Configure Live Viewer.ps1'>Download: Configure Live Viewer.ps1</a>
+5. <a target="_blank" href="/downloads/platform-tools.zip" download='platform-tools.zip'>Download: platform-tools.zip</a>. Extract the zip file and place platform-tools to the Desktop → Vertigo ConsoleV1
+
 ![Folder Setup](/img/folder-setup.png)
 
 If you have never run a .ps1 script on you computer, please follow the instruction on [this page](/docs/general/troubleshooting/allow-powershell) before you continue.
