@@ -43,7 +43,7 @@ If you have never run a .ps1 script on you computer, please follow the instructi
 The website runs inside a program called Docker Desktop. Locate and open "Docker Desktop." You can find its icon with a blue whale on the Windows taskbar. If you don't see it there, you may need to add it.
 <img src="/img/docker-desktop-icon.png" alt="Docker Desktop Icon" width="50"/>
 
-If docker is not yet installed, follow the instructions [here](/docs/general/troubleshooting/allow-powershell)
+If docker is not yet installed, follow the instructions [here](/docs/general/docker-installation)
 
 Image: The docker desktop icon.
 
