@@ -49,6 +49,9 @@ Invoke-Expression "$adbPath devices"
 $adbCommand = "$adbPath push config.txt /sdcard/Android/data/com.AltheriaSolutions.EESP_Reader_V1_00/files"
 Invoke-Expression $adbCommand
 
+$adbCommand = "$adbPath push config.txt /sdcard/Android/data/com.AltheriaSolutions.EESP_Reader_V1_01/files"
+Invoke-Expression $adbCommand
+
 Write-Host "The operation has completed. Press ENTER to close this program."
 Write-Host "If something failed, please copy the config.txt file to the headset manually to Quest 2/Internal Storage/Android/data/com.AltheriaSolutions.XXXXXX/files"
 $null = Read-Host
