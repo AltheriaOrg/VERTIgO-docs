@@ -24,10 +24,10 @@ Moving using mainly the mouse.
 
 - **Pan**: Press Middle/Scroll mouse button while moving the mouse  
 - **Zoom In/Out**: Scroll middle mouse button   
-- **Tilt**: Holding Right click mouse or holding Alt+Left click Mouse   
-- **Rotate**: If an object is selected Alt+Left mouse   
+- **Tilt**: Holding Right click mouse   
+- **Rotate**: If an object is selected +Right click mouse (rotate around an object)  
 
- ![HUB](/img/7Camera.png)
+ ![HUB](/img/7Camera.gif)
 
 
 ### b. Acting like a flying drone 
@@ -39,7 +39,7 @@ Moving using mainly the keyboard.
 
 - **Up/Down**: Right mouse click + EQ 
 
- ![HUB](/img/8Camera.png)
+
 
 
 ## Moving object in the 3D scene 
@@ -67,13 +67,24 @@ To change tap the corresponding key:
 
 - **R**: Scale 
   
-![HUB](/img/9TransformShorcut.png)
+![HUB](/img/9TransformShorcut.gif)
 
 ### b.Moving the object using the Transform tab 
  
 
-When you select an object, a tab called "Transform" will appear in the step behavior of the editor tab.  
+When you select an object, a tab called "Transform" will appear in the node behavior of the editor tab.  
 You can move the object by entering precise values, and the color corresponds to the axes color of the gizmo.
 
 
 ![HUB](/img/10MovingObject.png)
+
+### c.Focus on object and auto focus
+
+If you activate the autofocus toggle in the Object List, this option will automatically focus the scene view onto the last object you select. You can also do it manually by clicking the top left button of the scene view to focus on the selected object.
+
+![HUB](/img/10Autofocus.png)
+![HUB](/img/10Manualfocus.png)
+
+If you select the environment in the object list, you can also then find a list of points of interest in their properties. Open the Environment panel in the properties window
+
+![HUB](/img/10pointOfInterest.png)

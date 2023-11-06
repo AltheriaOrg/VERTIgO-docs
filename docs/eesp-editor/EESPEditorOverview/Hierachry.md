@@ -1,15 +1,15 @@
 ---
 sidebar_position: 3
-title: Hierarchy
+title: Object List
 ---
 
 ## 1.Overview 
  
 
-The hierarchy is a list of all the elements that are accessible inside the 3D view. You can select them, and all the elements related to it will appear in both the Scene view and the inspector. 
+The Object List is a list of all the elements that are accessible inside the 3D view. You can select them, and all the elements related to it will appear in both the Scene view and the Properties. 
 
  
-If an object of the list is gray, that means that it is inactive inside the current step you are on. 
+If an object of the list is gray, that means that it is inactive inside the current Node you are on. 
 
  
 
@@ -44,11 +44,11 @@ Represent the environment you are in. No action can or should be done on it.
 
  
 
-### b.Vr module/Player module: 
+### b.Vr trainee : 
 
  ![HUB](/img/13VRmodule.png)
 
-Represent the player. It has a unique set of parameters that need to be set up for the training to function correctly. 
+Represent the trainee. It has a unique set of parameters that need to be set up for the training to function correctly. 
 
  
 
@@ -59,7 +59,7 @@ Represent the player. It has a unique set of parameters that need to be set up f
 #### Inventory: 
 
 A list of all the tools that the trainee can access inside the VR.  
-You can also use them for specific behavior(See inspector section) 
+You can also use them for specific behavior(See Properties section) 
 
 Some tools have specific actions inside training. 
 
@@ -70,7 +70,7 @@ Some tools have specific actions inside training.
 
 1. **Name** of the tools 
 
-2. **Override**: It has to be ticked if you want the inventory to be changed on the specific step you are currently on. 
+2. **Override**: It has to be ticked if you want the inventory to be changed on the specific Node you are currently on. 
 
 3. **Bag**: Define if the tools can be found in the trainee bag. If crossed it means it is not. 
 
@@ -86,13 +86,13 @@ Tips: I suggest starting by removing everything and then add the one useful for 
 
  
 
-#### Skin properties: 
+#### Character look properties: 
 
  
  ![HUB](/img/15kinProperties.png)
   
 
-Configure the base genre, skin, and suits of the avatar. These settings are visible only on the first step and serve a purely immersive purpose, with no direct impact on the training. You can modify them during the training using the "Appearance" behavior, which replaces this tab when you are not on the first step. 
+Configure the base genre, skin, and suits of the avatar. These settings are visible only on the first Node and serve a purely immersive purpose, with no direct impact on the training. You can modify them during the training using the "Appearance" behavior, which replaces this tab when you are not on the first Node. 
 
  ![HUB](/img/16kinProperties.png)
 
@@ -100,14 +100,14 @@ Configure the base genre, skin, and suits of the avatar. These settings are visi
 
  
 
-#### Player Role: 
+#### Trainee Role: 
 
- ![HUB](/img/17PlayerRole.png)
+ ![HUB](/img/17PlayerRole.gif)
 
  
 
-Each VR module must be assigned a role in order for a trainee to be launched from the console.  
-Roles are utilized in the behavior tab to assign them to a specific trainee.(See inspector tab) 
+Each VR trainee must be assigned a role in order for a trainee to be launched from the console.  
+Roles are utilized in the behavior tab to assign them to a specific trainee.(See Properties tab) 
  
 
 Meteorological simulator: 
@@ -140,10 +140,17 @@ It is possible to add an element with the add button.
 
 - **Capsule**: Add capsule. 
 
-- **Text**: Add text. It possesses a text panel in state content where you can write text or connect existing one from the Datasheet. (see more in inspector section). 
+- **Text**: Add text. It possesses a text panel in Object Properties where you can write text or connect existing one from the Datasheet. (see more in Properties section). 
 
 - **Waypoint chain**: coming with Ai update 
 
-- **Player**: Add a VR module to the scene to create a multiplayer training. 
+- **Trainee**: Add a VR trainee to the scene to create a multiplayer training. 
 
-- **Particles emitter**: Create a source of particles for FX effects such as fire, smoke,... (See inspector section).
+- **Particles emitter**: Create a source of particles for FX effects such as fire, smoke,... (See Properties section).
+
+## 4.Auto focus
+
+If you activate the autofocus toggle in the Object List, this option will automatically focus the scene view onto the last object you select. You can also do it manually by clicking the top left button of the scene view to focus on the selected object.
+
+![HUB](/img/10Autofocus.png)
+![HUB](/img/10Manualfocus.png) 

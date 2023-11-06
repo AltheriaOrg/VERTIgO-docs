@@ -1,6 +1,6 @@
 ---
 sidebar_position: 7
-title: Inspector
+title: Properties
 ---
 
   
@@ -9,18 +9,18 @@ title: Inspector
  
 ![HUB](/img/32Inspector.PNG)
 
-The  inspector is one of the most important panels of the editor. 
-It provides you information on the object you’ve selected in the scene view or the hierarchy. 
+The Properties is one of the most important panels of the editor. 
+It provides you information on the object you’ve selected in the scene view or the Object List. 
 
  
 This means that depending on the type of object selected, you will have access to different information and actions related to that specific object. 
  
 
 1. **Name**: Change the object's name. 
-2. **Active**: Toggle to enable or disable the object for the current step. 
-3. **State Content**: Options that affect the selected object and persist across all steps. 
-4. **Step Behaviour**: Options specific to the selected object for the current node/step. 
-5. **State**: Assign specific states to the object, such as "flammable" or "radioactive." 
+2. **Active**: Toggle to enable or disable the object for the current Node. 
+3. **Object Properties**: Options that affect the selected object and persist across all Nodes. 
+4. **On Node Properties**: Options specific to the selected object for the current node. 
+5. **State**: Assign specific states to the object, such as "radioactive." 
 6. **Transform**: Adjust the position of the object within the 3D scene. 
 7. **Behaviour**: All the possible actions that are available for the selected objects. 
 
@@ -30,17 +30,17 @@ The tags panel is not used at the moment.
 
  
 
-## State content 
+## Object Properties
 ![HUB](/img/32StateContent.png)
   
-Inside the state content, you will find only a few panels, but they are extremely important for your training. 
+Inside the Object Properties, you will find only a few panels, but they are extremely important for your training. 
 
  
 We will go through the options available depending on the object's type. 
  
 
-### VR module: 
- ![HUB](/img/33VRmodule.png)
+### VR trainee: 
+
   
 - **Calibration**: Will not be useful for you.    
 - **Role**: see more in the Player Role tab. 
@@ -68,7 +68,7 @@ We will go through the options available depending on the object's type.
 
  
 
-Please note that a particle emitter is created for a single step. This means that if you want to have particle emitters running throughout the entire training, you will need to copy and paste the values for each emitter you create in the other steps. 
+Please note that a particle emitter is created for a single node. This means that if you want to have particle emitters running throughout the entire training, you will need to copy and paste the values for each emitter you create in the other nodes. 
 
  
 Typical value we use for smoke: 
@@ -92,11 +92,11 @@ Typical value we use for smoke:
  
  ![HUB](/img/38Text.png)
 
-Similarly to the particle system, please keep in mind that text will only be available for one step and will need to be added again for each step in your training. 
+Similarly to the particle system, please keep in mind that text will only be available for one node and will need to be added again for each node in your training. 
 
  
 **Content**: What will be shown in the scene. We recommend using the connect option if you want to be able to easily translate or update the text. 
-This way, you can maintain consistency and make updates more efficiently across multiple steps. See import text database.   
+This way, you can maintain consistency and make updates more efficiently across multiple nodes. See import text database.   
 **Text color**: the color of the text   
 **Outline color**: the outline color of the text    
 **Background color**: The color of a square at the back of the text.    
@@ -119,10 +119,10 @@ It is longer to set up but it can have a better aesthetic.
 You can also modify your text layout using rich text tag (https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichText.html) 
    
 
-## Step behavior: 
+## On Node Properties: 
  
 
-### State on current step:  
+### State on current node:  
 
 Coming with v2 
 
@@ -150,8 +150,8 @@ The colors are the same as the one you have on the gizmo and help you have an ea
  ![HUB](/img/42Transform.png)
 
 **Toggle**: Not working on this version.    
-**Propagate all**: Transfer the object’s position in this step to all the other steps.  
-**Activate all**: If an object is added to the scene later during the development of the training, it will be disabled for all the past steps. To activate it for all those steps, you can use the provided button, which will enable it retroactively. 
+**Propagate all**: Transfer the object’s position in this node to all the other nodes.  
+**Activate all**: If an object is added to the scene later during the development of the training, it will be disabled for all the past nodes. To activate it for all those nodes, you can use the provided button, which will enable it retroactively. 
 
  
 
@@ -159,13 +159,13 @@ The colors are the same as the one you have on the gizmo and help you have an ea
   
   ![HUB](/img/43Behavior.png)
 
-Those are the type of actions that can be added to an object to create a condition that when they will be executed will enable the trainee to continue onto the next step. 
+Those are the type of actions that can be added to an object to create a Task that when they will be executed will enable the trainee to continue onto the next node. 
  
 
-The most use one are the Move, Touch, Teleport and the Smartboard Item 
+The most use one are the Move, Touch, Teleport and the Action Panel Item 
 
  
-We also tend to use some with empty objects: Teleport, touch, conditional activator, Timer, Smartboard. 
+We also tend to use some with empty objects: Teleport, touch, conditional activator, Timer, Action Panel. 
 
  
 
@@ -189,7 +189,7 @@ The action will be to grab an object and move it on the target
  
   
 **Transform**: Can be used to move the target to a precise position.    
-**Sensitivity distance**: The distance from where the player can validate the action.   
+**Sensitivity distance**: The distance from where the trainee can validate the action.   
 **Sensitivity angle**: The precision of the rotation.   
  
 **Move family**:  
@@ -207,7 +207,7 @@ The action will be to grab an object and slide it on a single axis to the target
   ![HUB](/img/48Slide.PNG)
 
 **Transform**: Can be used to move the target at a precise position.    
-**Sensitivity distance**: The distance from where the player can validate the action.   
+**Sensitivity distance**: The distance from where the trainee can validate the action.   
  
  
 In general we set the sensitivity between 0.1 and 0.3. 
@@ -270,9 +270,9 @@ A target is created but can only be seen when the vr is on.
 
 #### f. Conditional activator:  
 
-This behavior will not create conditions. It is used to show or hide objects in a step depending on the score of a trainee. 
+This behavior will not create Tasks. It is used to show or hide objects in a node depending on the score of a trainee. 
  
-Score is measured with the smartboard. See more in the smartboard section. 
+Score is measured with the Action Panel. See more in the Action Panel section. 
 
 ![HUB](/img/52ConditionnalActivator.PNG)
   
@@ -294,11 +294,11 @@ Work with the waypoint chain that will come with V2
 
 #### h. Timer: 
  
-Create a timer that will automatically validate a condition when it ends. 
+Create a timer that will automatically validate a Task when it ends. 
  
 ![HUB](/img/56Timer.PNG)
  
-The timer launches when the step is launched. 
+The timer launches when the node is launched. 
 
  ![HUB](/img/57Timer.PNG)
 
@@ -311,15 +311,15 @@ Very useful when a trainee needs to perform a certain task within a certain peri
  
  
 
-#### i. Smartboard Item: 
+#### i. Action Panel Item: 
 
  
-The smartboard is used to ask questions to the trainee. The trainee can choose between multiple answers.  
+The Action Panel is used to ask questions to the trainee. The trainee can choose between multiple answers.  
  
 ![HUB](/img/58SmartBoard.png)
 ![HUB](/img/59SmartBoard.png)
 
-1. **Question**: The question that will be ask in the upper part of the smartboard. 
+1. **Question**: The question that will be ask in the upper part of the Action Panel. 
  
 ![HUB](/img/60SmartBoard.png)  
 You can connect text from the database. See more in the database section. 
@@ -340,9 +340,9 @@ b. If checked, it means it is the right answer.
 You can have as many answers as you want. 
  
 
-3. **On wrong answer**: If the smartboard validates the condition even if the trainee does not have the correct answer. If marked as repeat. The smartboard returns as it was previously. 
+3. **On wrong answer**: If the Action Panel validates the Task even if the trainee does not have the correct answer. If marked as repeat. The Action Panel returns as it was previously. 
 
-4. **Scored**: The trainee starts the training with a score of 100% Every time he will make a mistake, this score will decrease if the smartboard has the scored option enabled. 
+4. **Scored**: The trainee starts the training with a score of 100% Every time he will make a mistake, this score will decrease if the Action Panel has the scored option enabled. 
 
  
 ### Inventory behavior: 
@@ -358,11 +358,11 @@ All of them have an Inventory item drop down menu where the trainer has to choos
  
 #### a.Move: 
  
-Putting the condition creates a target that changes form depending on the asset selected in the list. 
+Putting the Task creates a target that changes form depending on the asset selected in the list. 
 
  ![HUB](/img/64InventoryMove.png)
  
-Sensitivity distance: The distance from where the player can validate the action. 
+Sensitivity distance: The distance from where the trainee can validate the action. 
 
 Sensitivity angle: The precision of the rotation. 
 
@@ -386,7 +386,7 @@ Pay attention some of them don’t have this button.
 
 **Sensitivity**: The precision of the orientation of the object when the trainee presses the button. 
 
-**Distance**: The furthest point from where the trainee can validate the condition. 
+**Distance**: The furthest point from where the trainee can validate the Task. 
  
 
 In general we keep sensitivity at 0 and the distance between 0.3 and 0.5.  

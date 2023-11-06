@@ -26,7 +26,6 @@ Open new tabs inside the editor.
 All necessary tabs are already opened on the first launch. 
 
  
-
  
 
 ## 3. Help 

@@ -121,7 +121,7 @@ We recommend to use .CSV file
 
  
 
-   A. **Connect**: By activating the connection from a text or a smartboard. You can directly plug your CSV text in it. 
+   A. **Connect**: By activating the connection from a text or a Action Panel. You can directly plug your CSV text in it. 
 
    B. **The name or note you give to your text**. This is purely made to help you organize yourself. 
 
