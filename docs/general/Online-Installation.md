@@ -22,20 +22,24 @@ The editor can the headset in tethered mode (usb cable) can already be used with
 # Step 3: Install the EESP Reader on the headsets
 Connect the headsets to the computer using a USB cable. On the right panel of the editor it should say a headset is connected. If this is not the case, you might need to confirm a popup inside the VR headset.
 ![install-apk.png](/img/install-apk.png)
-Press the "Install APK" button and select the .apk file that you downloaded. The installation process will begin and should not take longer than a couple minutes.
-The "Connect Headset" button is used to set the EESP Console that the headset will use to the EESP Console the editor is currently using. This is only required if you want to switch the headset from the Online EESP to an Offline EESP console or the reverse.
+Press the **Install APK** button and select the .apk file that you downloaded. The installation process will begin and should not take longer than a couple minutes.
+The **Connect Headset** button is used to set the EESP Console that the headset will use to the EESP Console the editor is currently using. This is only required if you want to switch the headset from the Online EESP to an Offline EESP console or the reverse.
 
 # Step 4: Add Headset To Console
 Navigate to the headsets page on the [EESP Console](https://vertigo.altheria.com) and press the "Add Headset" button. This will open a popup window.
 
 ![console-add-headset.png](/img/console-add-headset.png)
 
-Launch the EESP Reader in the VR headset.
+Launch the EESP Reader Application in the VR headset.
 
 ![console-add-headset-popup.png](/img/console-add-headset-popup.png)
 
-Press the + button in the Console to add the headset. You can rename the headset by navigating back to the Headsets and pressing the triple dots button on the headset.
+Press the + button in the Console to add the headset. You can rename the headset by navigating back to the Headsets page and pressing the triple dots button on the headset.
 After adding the headset for the first time you need to restart the Reader app before you can start using it.
 
 # Step 5: Setup Live Viewer
-TODO
+Press the **Connect Live Viewer** button.
+![connect-live-viewe.png](/img/connect-live-viewer.png)
+A file with the name **register_live_viewer.reg** will be created in the folder where you installed the EESP Editor. Open the **register_live_viewer.reg** and accept the popup window.
+![run-reg-file.png](/img/run-reg-file.png)
+The installation is now complete.

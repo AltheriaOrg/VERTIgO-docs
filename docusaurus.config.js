@@ -48,14 +48,9 @@ const config = {
                 }, items: [{
                     type: 'doc', docId: 'general/Online-Installation', position: 'left', label: 'General',
                 },{
-                    type: 'doc', docId: 'eesp-editor/General', position: 'left', label: 'EESP editor',
-                }, {
-                    type: 'doc', docId: 'trainer-web-app/General', position: 'left', label: 'Trainer web app',
-                }, {
-                    type: 'doc', docId: 'eesp-trainer-view/General', position: 'left', label: 'EESP trainer view',
-                }, {
-                    type: 'doc', docId: 'eesp-headset/General', position: 'left', label: 'EESP headset',
-                }],
+                    type: 'doc', docId: 'eesp-editor/General', position: 'left', label: 'EESP Editor',
+                }
+            ],
             }, footer: {
                 style: 'dark', links: [{
                     title: 'VERTIgO Project', items: [{
