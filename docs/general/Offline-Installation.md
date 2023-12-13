@@ -51,5 +51,24 @@ Open your browser and navigate to **http://you-ip-address:3000/seed**. This page
 ## Step 3: Connecting the editor, headsets and live viewer.
 Please follow the same instructions provided on the [Online Installation Guide](/docs/general/Online-installation) but replace **https://vertigo.altheria.com** with the IP address of your Console server, for example **http://192.168.1.100**. Return to this page after you completed all steps.
 
-## Step 4: Launching a multiplayer server.
-This section is a work in progress and will be updated soon.
+## Step 4: Configuring and launching a multiplayer server.
+The a multiplayer session consists of a trainees inside the VR application, optionally a trainer of the PC live viewer, and a multiplayer server. The server is the central authority in the session that synchronizes all trainees and 1 multiplayer server is required for every session. Its possible to run multiple servers at the same time to support multiple training session simultaneously for larger training center, but this setup is more complex.
+
+### Windows
+Open the Windows Server folder (or WinServer) you downloaded and run the .exe file 1 time. This will create required files on your PC.
+This will open a black windows with text. Wait a few second. If you see the message "Server is ready!" it was able to connect to the vertigo console. If you see "ERROR: NO DOMAIN HAS BEEN SPECIFIED FOR THIS SERVER!" you will need to do some more configuration.
+
+Navigate to the folder `C:\Users\<USER>\AppData\LocalLow\AltheriaSolutions\EESP` (the names might change after updates) and open the config.txt file. Type the IP address of the PC where the Console is located.
+![Server Config](/img/server-config.png)
+
+Save the file and run the .exe file of the Multiplayer Server again. After waiting, the "Server is ready!" should appear.
+You can now launch a training inside the Console.
+![Server Ready](/img/server-ready.png)
+It's is recommended to restart the server .exe between every training but it's is not required.
+
+:::tip
+The server does not need to run on the same PC as the Console. Its also possible to run multiple servers on different PC's that all connect to the same Console to support multiple simultaneous training sessions. Its also possible to run the servers inside multiple virtual machines as long as they use bridge networking.
+:::
+
+### Linux
+It's also possible to run the server on Linux or a Linux VM soon. This section will be updated soon when it's ready.
