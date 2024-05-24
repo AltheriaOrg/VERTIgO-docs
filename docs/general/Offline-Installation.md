@@ -57,7 +57,6 @@ Please follow the same instructions provided on the [Online Installation Guide](
 ## Step 4: Configuring and launching a multiplayer server.
 The a multiplayer session consists of a trainees inside the VR application, optionally a trainer of the PC live viewer, and a multiplayer server. The server is the central authority in the session that synchronizes all trainees and 1 multiplayer server is required for every session. Its possible to run multiple servers at the same time to support multiple training session simultaneously for larger training center, but this setup is more complex.
 
-### Windows
 Open the **WinServer** folder (or WinServer) you downloaded and run the .exe file 1 time. This will create required files on your PC.
 This will open a black windows with text. Wait a few second. If you see the message "Server is ready!" it was able to connect to the vertigo console. 
 
@@ -71,6 +70,10 @@ This setup will only allow 1 VR training at the same time. It is possible to hav
 
 A simpler solutions in having 2 separate networks each with their own dedicated PC and dedicated console.
 :::
+
+### Starter Scenarios
+The dropbox contains some example scenarios for the train and the sewer to help you get started.
+You can import these scenarios in you console by opening the console and navigating to the trainings page and press "Upload Training".
 
 ### Troubleshooting
 1. **Trainings stops after a few second:** If you receive the message "something went wrong" inside the VR training, it is possible the EESP server needs a little more configuration. 
