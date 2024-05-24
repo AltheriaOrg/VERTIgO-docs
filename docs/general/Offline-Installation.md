@@ -15,7 +15,7 @@ This page will provide an example of how to set up the software, but you are fre
     
     **Note: For the installation the network will need internet connection!** After installation is completed you can disconnect the network from the internet.
 4. **A static IP address**: We strongly recommend you set a static IP address for the PC. Either on the router DHCP settings (recommended) or [in the windows adapter settings](https://www.trendnet.com/press/resource-library/how-to-set-static-ip-address).
-4. **Download all the software**: Download all the latest versions of the software. We recommend you place them all in 1 folder like the image below.
+4. **Download all the software**: Download all the latest versions of the software. We recommend you place them all in 1 folder like the image below. (the files names might change over time)
 
 ![EESP files](/img/downloaded-files.png)
 
